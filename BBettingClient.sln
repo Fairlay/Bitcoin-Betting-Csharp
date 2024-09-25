@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34928.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BBettingClient", "BBettingClient\BBettingClient.csproj", "{775427E6-0BA4-4925-871C-FFD0EB0B09D2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BBettingModels", "BBetModels\BBettingModels.csproj", "{FB3DE794-5AAD-4611-AC07-57E128DFBDF1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{775427E6-0BA4-4925-871C-FFD0EB0B09D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{775427E6-0BA4-4925-871C-FFD0EB0B09D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{775427E6-0BA4-4925-871C-FFD0EB0B09D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{775427E6-0BA4-4925-871C-FFD0EB0B09D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB3DE794-5AAD-4611-AC07-57E128DFBDF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB3DE794-5AAD-4611-AC07-57E128DFBDF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB3DE794-5AAD-4611-AC07-57E128DFBDF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB3DE794-5AAD-4611-AC07-57E128DFBDF1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FFDD4B0C-39AF-46E6-A870-79228AB210F5}
+	EndGlobalSection
+EndGlobal
