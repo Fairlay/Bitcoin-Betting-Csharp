@@ -45,7 +45,7 @@ namespace BBetting
             var filename = "config.json";
             if (args.Length > 1 && args[1].Contains(".json"))  filename = args[0];
      
-            if (!File.Exists(filename))
+            if (File.Exists(filename))
             {
                 Console.WriteLine($"File {filename} does not exist");
                 return;
@@ -66,29 +66,7 @@ namespace BBetting
                 return;
             }
 
-            byte[] privKey;
-            if (_Config == null)
-            {
-                Console.WriteLine("Enter your ID as int:  ");
-                var idx = Console.ReadLine();
-                _Config = new Config() { UserID = Int32.Parse(idx) };
-            }
-
-
-            if (String.IsNullOrEmpty( _Config.PrivateKey))
-            {
-
-                Console.WriteLine("Generating PrivateKey and Save it to config! ");
-                privKey = StringX.CreatePrivKeyEd25519();
-                var stringkey = StringX.getStringHex(privKey);
-                _Config.PrivateKey = stringkey;
-
-                File.WriteAllText(filename, JsonConvert.SerializeObject(_Config));
-
-            }
-            else privKey = StringX.GetBytesHex(_Config.PrivateKey);
-
-
+            byte[] privKey = StringX.GetBytesHex(_Config.PrivateKey);
 
             if(_Config.MainNodeId!=0) S.MAIN_MarketNode = _Config.MainNodeId;
 
@@ -96,8 +74,8 @@ namespace BBetting
             var client1 = new BBettingClient(_Config.UserID, receiveMessageRequest,  _Config.InitAddresses, true, privKey, isETH: true, standardNode: S.MAIN_MarketNode);
 
 
-           // Task.Delay(2000).Wait();
-           // client1.SubscribePriv();
+            Task.Delay(2000).Wait();
+            client1.SubscribePriv();
 
 
             client1.SubscribeMarkets(new MarketFilter() { Cat= CATEGORY.TENNIS,  OnlyActive= true, Status= Market.StatusTypes.INPLAY, PageSize=100 });
