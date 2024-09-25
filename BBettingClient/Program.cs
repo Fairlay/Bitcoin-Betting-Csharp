@@ -45,7 +45,7 @@ namespace BBetting
             var filename = "config.json";
             if (args.Length > 1 && args[1].Contains(".json"))  filename = args[0];
      
-            if (File.Exists(filename))
+            if (!File.Exists(filename))
             {
                 Console.WriteLine($"File {filename} does not exist");
                 return;
