@@ -1,3 +1,4 @@
+
 1. Request an Invite to the platform  on www.bitcoin-betting.com
 2. Download MetaMask and connect to app.bitcoin-betting.com
 3. Retrieve your user id  from the app.
